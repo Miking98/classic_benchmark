@@ -1,15 +1,20 @@
 <div align="center">
   <h1>Top of the CLASS</h1>
+  <h4>
+    <a href="https://huggingface.co/datasets/Miking98/classic_benchmark">🤗 Dataset</a> • <a href="#">📝 Paper</a>
+  </h4>
   <h4>Benchmarking LLM Agents on Real-World Enterprise Tasks</h4>
   <img src="https://github.com/user-attachments/assets/f05a13a6-b0e5-45c8-b697-9db299694107" height="300" />
 </div>
 
 CLASSIC is a novel benchmark containing 1,511 real-world user-chatbot conversations and 413 workflows across 6 enterprise domains including IT, HR, and healthcare. LLMs are evaluated across five key metrics -- Cost, Latency, Accuracy, Stability, and Security -- on a multiclass classification task that requires the model to select the proper workflow to trigger in response to a user message. 
 
+
 ### 📖 Table of Contents
 1. [Installation](#installation)
 1. [Quick Start](#quick_start)
 1. [Examples](#examples)
+1. [Dataset](#dataset)
 1. [Citation](#citation)
 
 <a name="installation"/>
@@ -41,6 +46,13 @@ python3 run.py --data [PATH_TO_DATASET_YAML] --agent [PATH_TO_AGENT_YAML]
 
 * Run GPT-4o agent: `python3 run.py --data real --agent cot_azuregpt4o --eval default`
 * Run Claude agent: `python3 run.py --data real --agent cot_claude35 --eval default`
+
+<a name="dataset"/>
+
+# 🤗 Dataset
+
+[Download the dataset from HuggingFace here](https://huggingface.co/datasets/Miking98/classic_benchmark)
+
 
 <a name="citation"/>
 
