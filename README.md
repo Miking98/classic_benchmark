@@ -2,7 +2,7 @@
 
 Benchmarking LLM Agents on Real-World Enterprise Tasks
 
-# 📖 Table of Contents
+### 📖 Table of Contents
 1. [Installation](#installation)
 1. [Quick Start](#quick_start)
 1. [Examples](#examples)
@@ -35,8 +35,10 @@ python3 run.py --data [PATH_TO_DATASET_YAML] --agent [PATH_TO_AGENT_YAML]
 
 # 👨‍💻 Examples
 
-* Run GPT-4o agent on CLASSIC benchmark: `python3 run.py --data real --agent cot_azuregpt4o --eval default`
-* Run Claude agent on CLASSIC benchmark: `python3 run.py --data real --agent cot_claude35 --eval default`
+* Run GPT-4o agent: `python3 run.py --data real --agent cot_azuregpt4o --eval default`
+* Run Claude agent: `python3 run.py --data real --agent cot_claude35 --eval default`
+
+<a name="citation"/>
 
 # 🎓 Citation
 
