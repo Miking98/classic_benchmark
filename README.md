@@ -1,6 +1,10 @@
-# Top of the CLASS
+<div align="center">
+  <h1>Top of the CLASS</h1>
+  <h4>Benchmarking LLM Agents on Real-World Enterprise Tasks</h4>
+  <img src="https://github.com/user-attachments/assets/f05a13a6-b0e5-45c8-b697-9db299694107" height="300" />
+</div>
 
-Benchmarking LLM Agents on Real-World Enterprise Tasks
+CLASSIC is a novel benchmark containing 1,511 real-world user-chatbot conversations and 413 workflows across 6 enterprise domains including IT, HR, and healthcare. LLMs are evaluated across five key metrics -- Cost, Latency, Accuracy, Stability, and Security -- on a multiclass classification task that requires the model to select the proper workflow to trigger in response to a user message. 
 
 ### 📖 Table of Contents
 1. [Installation](#installation)
