@@ -1,7 +1,7 @@
 <div align="center">
   <h1>CLASSic Benchmark</h1>
   <h4>
-    <a href="https://huggingface.co/datasets/Miking98/classic_benchmark">🤗 Dataset</a> • <a href="https://openreview.net/forum?id=RQjUpeINII">📝 Paper</a>
+    <a href="https://huggingface.co/datasets/Miking98/classic_benchmark-v0">🤗 Dataset</a> • <a href="https://openreview.net/forum?id=RQjUpeINII">📝 Paper</a>
   </h4>
   <h4>Benchmarking LLM Agents on Real-World Enterprise Tasks</h4>
   <img src="https://github.com/user-attachments/assets/f05a13a6-b0e5-45c8-b697-9db299694107" height="300" />
