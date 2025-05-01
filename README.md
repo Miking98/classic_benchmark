@@ -1,7 +1,7 @@
 <div align="center">
   <h1>CLASSic Benchmark</h1>
   <h4>
-    <a href="https://huggingface.co/datasets/Miking98/classic_benchmark-v0">🤗 Dataset</a> • <a href="https://openreview.net/forum?id=RQjUpeINII">📝 Paper</a>
+    <a href="https://huggingface.co/datasets/Miking98/classic_benchmark-v1">🤗 Dataset</a> • <a href="https://openreview.net/forum?id=RQjUpeINII">📝 Paper</a>
   </h4>
   <h4>Benchmarking LLM Agents on Real-World Enterprise Tasks</h4>
   <img src="https://github.com/user-attachments/assets/f05a13a6-b0e5-45c8-b697-9db299694107" height="300" />
@@ -38,22 +38,22 @@ cd classic_benchmark && pip install -e .
 python3 run.py --data [PATH_TO_DATASET_YAML] --agent [PATH_TO_AGENT_YAML]
 ```
 
-2. Or, download the dataset from [HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v0) and run your own custom scripts.
+2. Or, download the dataset from [HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v1) and run your own custom scripts.
 
 ```python
 from datasets import load_dataset
 
 # Load dataset subsets
-ds_messages = load_dataset('Miking98/classic_benchmark-v0', 'messages')
-ds_workflows = load_dataset('Miking98/classic_benchmark-v0', 'workflows')
-ds_domains = load_dataset('Miking98/classic_benchmark-v0', 'domains')
-ds_jailbreak_prompts = load_dataset('Miking98/classic_benchmark-v0', 'jailbreak_prompts')
+ds_messages = load_dataset('Miking98/classic_benchmark-v1', 'messages')
+ds_workflows = load_dataset('Miking98/classic_benchmark-v1', 'workflows')
+ds_domains = load_dataset('Miking98/classic_benchmark-v1', 'domains')
+ds_jailbreak_prompts = load_dataset('Miking98/classic_benchmark-v1', 'jailbreak_prompts')
 
 print(ds_messages)
 """
 DatasetDict({
     test: Dataset({
-        features: ['conversation_uuid', 'request_content', 'response_content', 'true_workflow_uuid', 'true_workflow_uuid_2', 'aisera_workflow_uuid', 'aisera_n_tokens', 'aisera_cost', 'aisera_latency', 'request_idx', 'domain_uuid'],
+        features: ['conversation_uuid', 'request_content', 'response_content', 'true_workflow_uuid', 'true_workflow_uuid_2', 'request_idx', 'domain_uuid'],
         num_rows: 1511
     })
 })
@@ -72,7 +72,30 @@ DatasetDict({
 
 # 🤗 Dataset
 
-[Download the dataset from HuggingFace here](https://huggingface.co/datasets/Miking98/classic_benchmark)
+[Download the dataset from 🤗 HuggingFace here](https://huggingface.co/datasets/Miking98/classic_benchmark-v1)
+
+
+<a name="leaderboard" />
+
+# 📊 Leaderboard
+
+We keep a regularly updated leaderboard of model performance for each version of CLASSic.
+
+### v0
+
+Dataset (n=2311): Original dataset from 2025 ICLR Workshop submission. Not released due to privacy considerations.
+
+![all](https://github.com/user-attachments/assets/584d90ee-80cb-44dc-8b97-3df2b60dfacb)
+
+![accuracy](https://github.com/user-attachments/assets/079c8792-e081-4a47-8799-05945ce538e8)
+
+### v1
+
+Dataset(n=1511): [🤗 HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v1). A filtered version of **v0**
+
+![all](https://github.com/user-attachments/assets/1074754c-8bb6-49bb-8648-3edd69dc9496)
+
+![accuracy](https://github.com/user-attachments/assets/853b2919-27bb-497d-b17c-7ed075d47adf)
 
 
 <a name="citation"/>
