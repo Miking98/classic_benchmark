@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Top of the CLASS</h1>
+  <h1>CLASSic Benchmark</h1>
   <h4>
     <a href="https://huggingface.co/datasets/Miking98/classic_benchmark">🤗 Dataset</a> • <a href="#">📝 Paper</a>
   </h4>
