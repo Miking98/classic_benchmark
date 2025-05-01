@@ -81,19 +81,21 @@ DatasetDict({
 
 We keep a regularly updated leaderboard of model performance for each version of CLASSic.
 
-### v0 (n=2311)
+### v0
 
 * Original dataset from 2025 ICLR Workshop submission.
 * Access: *Not released due to privacy considerations.*
+* \# of messages: 2311
 
 ![all](https://github.com/user-attachments/assets/584d90ee-80cb-44dc-8b97-3df2b60dfacb)
 
 ![accuracy](https://github.com/user-attachments/assets/079c8792-e081-4a47-8799-05945ce538e8)
 
-### v1 (n=1511)
+### v1
 
 * Filtered version of **v0**
 * Access: [🤗 HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v1)
+* \# of messages: 1511
 
 ![all](https://github.com/user-attachments/assets/1074754c-8bb6-49bb-8648-3edd69dc9496)
 
