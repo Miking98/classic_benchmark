@@ -32,13 +32,13 @@ cd classic_benchmark && pip install -e .
 
 # 🚀 Quick Start
 
-1. Run the benchmark:
+Run the benchmark:
 
 ```bash
 python3 run.py --data [PATH_TO_DATASET_YAML] --agent [PATH_TO_AGENT_YAML]
 ```
 
-2. Or, download the dataset from [HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v1) and run your own custom scripts.
+Or, download the dataset from [HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v1) and run your own custom scripts.
 
 ```python
 from datasets import load_dataset
@@ -81,17 +81,19 @@ DatasetDict({
 
 We keep a regularly updated leaderboard of model performance for each version of CLASSic.
 
-### v0
+### v0 (n=2311)
 
-Dataset (n=2311): Original dataset from 2025 ICLR Workshop submission. Not released due to privacy considerations.
+* Original dataset from 2025 ICLR Workshop submission.
+* Access: *Not released due to privacy considerations.*
 
 ![all](https://github.com/user-attachments/assets/584d90ee-80cb-44dc-8b97-3df2b60dfacb)
 
 ![accuracy](https://github.com/user-attachments/assets/079c8792-e081-4a47-8799-05945ce538e8)
 
-### v1
+### v1 (n=1511)
 
-Dataset(n=1511): [🤗 HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v1). A filtered version of **v0**
+* Filtered version of **v0**
+* Access: [🤗 HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v1)
 
 ![all](https://github.com/user-attachments/assets/1074754c-8bb6-49bb-8648-3edd69dc9496)
 
