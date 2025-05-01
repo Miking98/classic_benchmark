@@ -7,7 +7,7 @@
   <img src="https://github.com/user-attachments/assets/f05a13a6-b0e5-45c8-b697-9db299694107" height="300" />
 </div>
 
-CLASSIC is a novel benchmark containing 1,511 real-world user-chatbot conversations and 413 workflows across 6 enterprise domains including IT, HR, and healthcare. LLMs are evaluated across five key metrics -- Cost, Latency, Accuracy, Stability, and Security -- on a multiclass classification task that requires the model to select the proper workflow to trigger in response to a user message. 
+CLASSIC is a novel benchmark containing **1,511 real-world user-chatbot conversations** and **413 workflows** across **6 enterprise domains** including IT, HR, and healthcare. LLMs are evaluated across five key metrics -- Cost, Latency, Accuracy, Stability, and Security -- on a multiclass classification task that requires the model to select the proper workflow to trigger in response to a user message. 
 
 
 ### 📖 Table of Contents
@@ -32,13 +32,34 @@ cd classic_benchmark && pip install -e .
 
 # 🚀 Quick Start
 
-1. Download the dataset [TODO]
-
-2. Run the benchmark:
+1. Run the benchmark:
 
 ```bash
 python3 run.py --data [PATH_TO_DATASET_YAML] --agent [PATH_TO_AGENT_YAML]
 ```
+
+2. Or, download the dataset from [HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v0) and run your own custom scripts.
+
+```python
+from datasets import load_dataset
+
+# Load dataset subsets
+ds_messages = load_dataset('Miking98/classic_benchmark-v0', 'messages')
+ds_workflows = load_dataset('Miking98/classic_benchmark-v0', 'workflows')
+ds_domains = load_dataset('Miking98/classic_benchmark-v0', 'domains')
+ds_jailbreak_prompts = load_dataset('Miking98/classic_benchmark-v0', 'jailbreak_prompts')
+
+print(ds_messages)
+"""
+DatasetDict({
+    test: Dataset({
+        features: ['conversation_uuid', 'request_content', 'response_content', 'true_workflow_uuid', 'true_workflow_uuid_2', 'aisera_workflow_uuid', 'aisera_n_tokens', 'aisera_cost', 'aisera_latency', 'request_idx', 'domain_uuid'],
+        num_rows: 1511
+    })
+})
+"""
+```
+
 
 <a name="examples"/>
 
