@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "classicbench"
+version = "0.1.0"
+authors = [
+    {name = "Michael Wornow", email = "mwornow@stanford.edu"},
+]
+dependencies = [
+    "openai==1.52.0",
+    "omegaconf==2.3.0",
+    "pandas==2.2.3",
+    "python-dotenv==1.0.1",
+    "litellm",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "presidio-analyzer",
+    "presidio-anonymizer",
+    "tenacity",
+    "tqdm",
+    "better-profanity",
+    "tabulate",
+    "openpyxl",
+    "xlsxwriter",
+    "datasets",
+    "huggingface_hub",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["classicbench*"]
+namespaces = true

@@ -22,8 +22,8 @@ CLASSIC is a novel benchmark containing **1,511 real-world user-chatbot messages
 # 💿 Installation
 
 ```bash
-conda create -n classic python=3.10 -y
-conda activate classic
+conda create -n classicbench python=3.10 -y
+conda activate classicbench
 git clone https://github.com/Miking98/classic_benchmark.git
 cd classic_benchmark && pip install -e .
 ```
@@ -36,6 +36,10 @@ Run the benchmark:
 
 ```bash
 python3 run.py --data [PATH_TO_DATASET_YAML] --agent [PATH_TO_AGENT_YAML]
+
+# Examples:
+python3 run.py --data v1 --agent aisera --eval no_security
+python3 run.py --data v1 --agent cot_gpt4 --eval no_security
 ```
 
 Or, download the dataset from [HuggingFace](https://huggingface.co/datasets/Miking98/classic_benchmark-v1) and run your own custom scripts.
