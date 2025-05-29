@@ -1,0 +1,3 @@
+# Run all metrics
+eval:
+  n_trials: 1 # Number of times to run each individual example thru the agent

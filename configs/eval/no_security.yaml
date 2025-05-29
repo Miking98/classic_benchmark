@@ -1,0 +1,4 @@
+# Run all metrics except "security"
+eval:
+  n_trials: 1 # Number of times to run each individual example thru the agent
+  limit_to_metrics: [cost, latency, accuracy, stability]

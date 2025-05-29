@@ -1,0 +1,5 @@
+agent:
+  name: cot
+  base_model: gpt-4o
+  path_to_log_dir: ../ignore/logs/cot_gpt4/
+  api_key: [INSERT_API_KEY_HERE]

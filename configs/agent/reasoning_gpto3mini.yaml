@@ -1,0 +1,5 @@
+agent:
+  name: reasoning
+  base_model: o3-mini
+  path_to_log_dir: ../ignore/logs/reasoning_gpto3mini/
+  api_key: [INSERT_API_KEY_HERE]

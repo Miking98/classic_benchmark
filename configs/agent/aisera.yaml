@@ -1,0 +1,3 @@
+agent:
+  name: aisera
+  path_to_labels: ../data/3_clean_v1/messages.csv

@@ -1,0 +1,6 @@
+agent:
+  name: cot
+  base_model: azure/gpt-4o
+  api_base: "https://azure-openai-ce.openai.azure.com"
+  api_version: "2023-03-15-preview"
+  api_key: [INSERT_API_KEY_HERE]

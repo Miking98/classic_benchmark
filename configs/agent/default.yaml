@@ -1,0 +1,4 @@
+agent:
+  name: aisera # name of file in agents/ to load OurAgent from
+  # any kwargs used by agent
+  # base_model: gpt-4o-mini
