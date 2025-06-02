@@ -2,9 +2,6 @@
 Usage:
     python 6_hf_dataset.py --path_to_dataset_dir <path_to_dataset_dir> --hf_version <hf_version>
 
-Example:
-    python 6_hf_dataset.py --path_to_dataset_dir data/3_clean_v1 --path_to_output_dir data/4_hf_dataset_v1 --hf_version v1
-
 Purpose:
     Create a dataset for the Hugging Face Hub.
 """
@@ -15,18 +12,24 @@ import argparse
 from huggingface_hub import upload_folder
 import datetime
 from classicbench.utils import get_rel_path
+from classicbench.private.run_deidentify import run_deidentification
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Upload dataset to Hugging Face Hub")
     parser.add_argument("--path_to_dataset_dir", type=str, default=get_rel_path("data/3_clean_v1"), help="Path to the dataset directory. This should contain multiple .xlsx files, each .xlsx file with the same structure but from a different annotator.")
     parser.add_argument("--path_to_output_dir", type=str, default=get_rel_path("data/4_hf_dataset_v1"), help="Path to the output directory.")
     parser.add_argument("--hf_version", type=str, default="v1", help="Version of the dataset on the Hugging Face Hub.")
+    parser.add_argument("--is_deidentify", type=bool, default=False, help="Whether to deidentify the datasets.")
     return parser.parse_args()
 
 def main():
     args = parse_args()
     dataset_name = f"Miking98/classic_benchmark-{args.hf_version}"
     os.makedirs(args.path_to_output_dir, exist_ok=True)
+    
+    # Deidentify datasets
+    if args.is_deidentify:
+        run_deidentification(args.path_to_dataset_dir)
     
     # Copy datasets to output directory
     for file in os.listdir(args.path_to_dataset_dir):
