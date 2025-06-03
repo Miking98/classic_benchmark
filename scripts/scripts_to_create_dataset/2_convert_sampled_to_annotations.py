@@ -43,15 +43,9 @@ def main():
     sheets: Dict[str, pd.DataFrame] = {}
     
     # Process domains
-    DOMAIN_LIST: List[str] = [
-        'medical', 
-        'hr', 
-        'it',
-        'finance',
-        'biotech',
-        'bank',
-        'edtech',
-    ]
+    DOMAIN_LIST: List[str] = [ x for x in os.listdir(args.path_to_dataset_dir) if os.path.isdir(os.path.join(args.path_to_dataset_dir, x)) ]
+    print(f"Found {len(DOMAIN_LIST)} domains to convert to Excel sheet for AMT annotations: {DOMAIN_LIST}")
+    
     for domain in tqdm(DOMAIN_LIST, desc=f"Converting sampled chats to Excel sheet for AMT annotations", total=len(DOMAIN_LIST)):
         path_to_message_csv: str = os.path.join(args.path_to_dataset_dir, domain, f"messages.csv")
         path_to_workflow_csv: str = os.path.join(args.path_to_dataset_dir, domain, f"workflows.csv")

@@ -48,7 +48,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Sample and Evaluate Chat Data")
     parser.add_argument("--path_to_dataset_dir", type=str, default=get_rel_path("data/0_raw"), help="Path to the raw dataset dump from Aisera.")
     parser.add_argument("--path_to_output_dir", type=str, default=get_rel_path("data/1_sampled"), help="Path to where sampled chats will be saved.")
-    parser.add_argument("--n_samples", type=int, default=1000, help="# of samples to take from the dataset.")
+    parser.add_argument("--n_samples", type=int, default=1000, help="# of samples per domain to take.")
     return parser.parse_args()
 
 def drop_messages_after_condition(df: pd.DataFrame, condition_mask: pd.Series) -> pd.DataFrame:
@@ -507,16 +507,9 @@ def main():
     args = parse_args()
     
     # Process domains
-    DOMAIN_LIST: List[str] = [
-        'medical', 
-        'hr', 
-        'it',
-        'finance',
-        'biotech',
-        'bank',
-        'edtech',
-    ]
-    
+    DOMAIN_LIST: List[str] = [ x for x in os.listdir(args.path_to_dataset_dir) if os.path.isdir(os.path.join(args.path_to_dataset_dir, x)) ]
+    print(f"Found {len(DOMAIN_LIST)} domains to sample from: {DOMAIN_LIST}")
+
     for domain in tqdm(DOMAIN_LIST, desc=f"Sampling {args.n_samples} chats from each domain", total=len(DOMAIN_LIST)):
         sample_domain(args, domain)
     
