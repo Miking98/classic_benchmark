@@ -216,7 +216,7 @@ def sample_conversation_uuids(df_messages: pd.DataFrame, df_workflows: pd.DataFr
     num_workflows: int = len(workflow_uuids)
     if num_workflows == 0:
         print("No workflows found.")
-        return
+        return []
     print(f"Found {num_workflows} unique workflows.")
     per_workflow_sample: int = n_samples // num_workflows
     print(f"Attempting to sample {per_workflow_sample} chats per workflow.")
