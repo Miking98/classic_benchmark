@@ -83,11 +83,11 @@ DatasetDict({
 
 Listed in order of creation. Each subsequent folder depends on the previous one.
 
-### `./data/0_raw`
+#### `./data/0_raw`
 
 Raw data dump from Aisera. 
 
-### `./data/1_sampled`
+#### `./data/1_sampled`
 
 Next, we sample a subset of chats from the `raw` data dump by running:
 
@@ -95,7 +95,7 @@ Next, we sample a subset of chats from the `raw` data dump by running:
 python3 scripts/scripts_to_create_dataset/1_convert_raw_to_sampled.py
 ```
 
-### `./data/2_annotations`
+#### `./data/2_annotations`
 
 Next, we generate an Excel file to send to AMT workers to annotate the `sampled` data by running:
 
@@ -109,7 +109,7 @@ IRL, we need to:
 
 2. Save the annotated Excel files into `data/2_annotations` and delete the original unannotated Excel file.
 
-### `./data/3_clean`
+#### `./data/3_clean`
 
 Next, we clean the dataset from `annotations` by removing conversations flagged by our annotators by running:
 
@@ -119,7 +119,7 @@ python3 scripts/scripts_to_create_dataset/3_convert_annotations_to_clean.py
 
 This is our final, cleaned dataset.
 
-### `./data/4_iclr_workshop_sample.zip`
+#### `./data/4_iclr_workshop_sample.zip`
 
 Submitted to ICLR reviewers.
 
@@ -129,11 +129,11 @@ To generate:
 python3 scripts/scripts_to_create_dataset/4_convert_clean_to_iclr_workshop_sample.py
 ```
 
-### `./data/5_iclr_workshop_full.zip`
+#### `./data/5_iclr_workshop_full.zip`
 
 Original dataset reported in ICLR paper.
 
-### `./data/6_hf_dataset`
+#### `./data/6_hf_dataset`
 
 Convert the dataset to a Hugging Face Dataset and upload it to the Hub.
 
